@@ -1,74 +1,190 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.site-header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            color: #f8fafc;
-            background: rgba(39, 39, 39, 0.94);
-            border-bottom: 1px solid rgb(148 163 184 / 20%);
-            backdrop-filter: blur(12px);
-        }
+body {
+  min-height: 100vh;
+  background: #080808;
+  font-family: "Rock Salt", "Inter", sans-serif;
+  padding: 8px 5%;
+}
 
-        .site-nav {
-            width: min(100% - 2rem, 1100px);
-            min-height: 4.5rem;
-            margin-inline: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-        }
 
-        .site-brand {
-            margin: 0;
-            font-size: 1.25rem;
-            letter-spacing: 0.04em;
-        }
+.navbar {
+  width: 100%;
+  max-width: 1400px;
+  height: 66px;
+  margin: 0 auto;
+  padding: 0 40px;
 
-        .site-nav ul {
-            display: flex;
-            align-items: center;
-            gap: clamp(1rem, 4vw, 2.5rem);
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-        .site-nav a {
-            color: inherit;
-            font-weight: 500;
-            text-decoration: none;
-            transition: color 160ms ease;
-        }
+  background: rgba(17, 17, 19, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
-        .site-nav a:hover,
-        .site-nav a:focus-visible {
-            color: #7a7c7c;
-        }
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 60px;
 
-        .site-nav a:focus-visible {
-            outline: 2px solid currentColor;
-            outline-offset: 5px;
-        }
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
 
-        @media (max-width: 480px) {
-            .site-nav {
-                width: calc(100% - 1.5rem);
-                gap: 1rem;
-            }
+  position: relative;
+  z-index: 10;
+}
 
-            .site-brand {
-                font-size: 1.05rem;
-            }
 
-            .site-nav ul {
-                gap: 0.8rem;
-                font-size: 0.9rem;
-            }
-        }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.red {
+  color: #ff1235;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff1235;
+  font-size: 48px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+
+  text-shadow: 0 0 18px rgba(255, 0, 40, 0.5);
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.nav-link {
+  height: 58px;
+  min-width: 118px;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #aaa;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  border: 1px solid transparent;
+  border-radius: 40px;
+
+  transition: all 0.3s ease;
+}
+
+
+.nav-link.active {
+  color: #fff;
+  border-color: #ff1235;
+
+  box-shadow:
+    0 0 15px rgba(255, 0, 40, 0.08),
+    inset 0 0 12px rgba(255, 0, 40, 0.04);
+}
+
+.nav-link.active i {
+  color: #ff1235;
+  filter: drop-shadow(0 0 7px #ff1235);
+}
+
+
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 18, 53, 0.07);
+  border-color: rgba(255, 18, 53, 0.45);
+}
+
+.nav-link:hover i {
+  color: #ff1235;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px 3%;
+  }
+
+  .navbar {
+    padding: 0 22px;
+    height: 76px;
+  }
+
+  .logo {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .logo-icon {
+    font-size: 38px;
+    width: 38px;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-link {
+    min-width: auto;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 12px;
+    height: 68px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .logo-icon {
+    width: 30px;
+    font-size: 32px;
+  }
+
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-link {
+    height: 45px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+}
