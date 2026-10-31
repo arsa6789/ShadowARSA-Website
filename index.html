@@ -3,48 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ShadowARSA portfolio landing page" />
     <title>ShadowARSA</title>
     <link rel="icon" type="image/x-icon" href="./130658764" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
-    <style></style>
   </head>
   <body>
     <header class="navbar">
       <a href="#" class="logo">
-        <span class="logo-icon">S</span>
         <span>Shadow<span class="red">ARSA</span></span>
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#home" class="nav-link active">
-          <i class="fa-solid fa-house"></i>
           <span>Home</span>
         </a>
 
         <a href="#projects" class="nav-link">
-          <i class="fa-solid fa-folder"></i>
           <span>Projects</span>
         </a>
 
         <a href="#contact" class="nav-link">
-          <i class="fa-solid fa-envelope"></i>
           <span>Contact</span>
         </a>
       </nav>
     </header>
-    <section id="hero">
-        <div class="right">
-            <span>FULL STACK DEVELOPER</span>
-            <h1>Hi, I'm ShadowARSA</h1>
-            <p>I build modern web experiences with <span>React</span>, <span>Nextjs</span> and a passion for code</p>
-            <button>View Projects</button>
-            <button>Contact Me</button>
-            
-        </div>
-        <div class="left">
 
+    <main>
+      <section id="hero" class="hero">
+        <div class="right">
+          <span class="eyebrow">Full Stack Developer</span>
+          <h1>Hi, I'm <span>ShadowARSA</span></h1>
+          <p>
+            I build modern web experiences with <span>React</span>, <span>Next.js</span>
+            and a passion for clean, scalable code.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btnLinks pr" href="https://github.com/arsa6789?tab=repositories" target="_blank" rel="noreferrer">
+              View Projects
+            </a>
+            <a class="btnLinks se" href="mailto:arsa014444@gmail.com">
+              Contact Me
+            </a>
+          </div>
         </div>
-    </section>
+
+        <div class="left">
+          <img class="profilePic" src="./profile.png" alt="profile pic" />
+        </div>
+      </section>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>
