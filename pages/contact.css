@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 :root {
   --bg: #07080b;
   --panel: rgba(17, 17, 19, 0.8);
@@ -10,11 +10,11 @@
   --accent-soft: rgba(255, 18, 53, 0.12);
   --shadow: rgba(0, 0, 0, 0.35);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Rock Salt";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rock Salt";
 }
 html {
   overflow: hidden;
