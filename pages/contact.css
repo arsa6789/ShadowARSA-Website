@@ -15,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Rock Salt";
+  color: var(--text);
 }
 html {
   overflow: hidden;
@@ -137,4 +138,46 @@ img {
 .nav-link.active i,
 .nav-link:hover i {
   color: var(--accent);
+}
+.contactHead span {
+  color: var(--accent);
+}
+.emLink{
+  color: var(--text);
+  text-decoration: none;
+}
+#textBox{
+  width: 20rem;
+  height: 10rem;
+  background: var(--bg);
+  border: 1px solid var(--muted);  
+}
+.subBtn {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--muted);
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.subBtn:hover {
+  color: var(--bg);
+  background: var(--text);
+  transition: 0.1s ease-in-out;
+}
+#textInput{
+  width: 15rem;
+  background: var(--bg);
+  border: 1px solid var(--muted); 
+}
+#emailInput{
+  width: 15rem;
+  background: var(--bg);
+  border: 1px solid var(--muted);  
+}
+#emailInput:focus,
+#textInput:focus,
+#textBox:focus{
+  outline: none; 
+  border: 1px solid #ff3333;
 }

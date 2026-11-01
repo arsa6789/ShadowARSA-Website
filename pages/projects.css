@@ -139,6 +139,12 @@ img {
 .nav-link:hover i {
   color: var(--accent);
 }
+.cardHeading{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .card {
   display: inline-block;
   width: 300px;
@@ -171,7 +177,7 @@ img {
 }
 .cardSec{
   display: inline-block;
-  width: 300px;
+  width: 315px;
   height: 400px;
   background-color: var(--panel);
   color: var(--text);
